@@ -36,7 +36,7 @@ function book() public payable onlyWhileVancant  costs(2)
 currentStatus=Status.Occupied;
 
 (bool sent, ) = Owner.call{value : msg.value}("");
-require(sent);
+require(sent); 
 
 
 emit Occupy(msg.sender,msg.value);
